@@ -1,0 +1,113 @@
+{
+  "name": "vue-prevent-overscroll.js",
+  "description": "A directive supported plugin for prevent overscroll when scroll on a fixed/absolute DOM in Vue.js components.",
+  "version": "2.0.1",
+  "author": {
+    "name": "Emil Zhai",
+    "email": "root@derzh.com"
+  },
+  "keywords": [
+    "vue",
+    "dom",
+    "prevent-overscroll"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinymins/vue-prevent-overscroll.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tinymins/vue-prevent-overscroll.js/issues"
+  },
+  "homepage": "https://github.com/tinymins/vue-prevent-overscroll.js#readme",
+  "files": [
+    "dist/*",
+    "src/components/*",
+    "*.md",
+    "*.js",
+    "*.json"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run setup && npm run dev",
+    "setup": "bash setup.sh",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "build": "rimraf dist && webpack --config build/webpack.prod.conf.js --progress",
+    "lint": "eslint src/**/*.{js,vue} --fix && npm run lint:style",
+    "lint:style": "stylelint src/**/*.{less,vue} --fix",
+    "prettier": "prettier --write ./src/**/**/**/*",
+    "commitmsg": "commitlint -E GIT_PARAMS"
+  },
+  "lint-staged": {
+    "**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{vue,less}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-angular": "^7.0.1",
+    "autoprefixer": "^9.2.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jsonlint": "^1.6.3",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^7.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.1.6",
+    "postcss-url": "^7.2.1",
+    "prettier": "^1.13.7",
+    "rimraf": "^2.6.3",
+    "sass": "^1.15.1",
+    "sass-loader": "^7.1.0",
+    "script-loader": "^0.7.2",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "terser-webpack-plugin": "^1.1.0",
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.22",
+    "vue-loader": "^15.5.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.23.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.1.4"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
