@@ -24,5 +24,8 @@ new Vue({
 You can simply add a directive tag to start using.
 
 ```html
-<div v-prevent-overscroll>This text will be transfered to end of body</div>
+<div>
+  This div may contains a scroll bar, and not want to be affected by popup layer.
+  <div v-prevent-overscroll>Scroll in this area (popup layer) will never affect body scroll bar.</div>
+</div>
 ```
