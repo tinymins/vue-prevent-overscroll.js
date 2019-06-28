@@ -17,6 +17,7 @@ module.exports = merge(baseConfig, {
     library: 'PreventOverscroll',
     libraryTarget: 'umd',
     umdNamedDefine: true,
+    globalObject: 'this',
   },
   module: {
     rules: [
