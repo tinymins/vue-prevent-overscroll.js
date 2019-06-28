@@ -6,6 +6,4 @@
  * @copyright: Copyright (c) 2018 TINYMINS.
  */
 
-import preventoverscroll from './dist/preventoverscroll';
-
-export default preventoverscroll;
+module.exports = require('./dist/preventoverscroll');
