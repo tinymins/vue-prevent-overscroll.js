@@ -9,6 +9,9 @@
 const DIRECTIVE_NAME = 'prevent-overscroll';
 
 const canScrollEl = ($el, up) => {
+  if ($el.attributes['disable-prevent-overscroll']) {
+    return true;
+  }
   const overflow = up
     ? Math.abs($el.scrollTop) > Number.EPSILON
     : $el.scrollHeight - $el.scrollTop - $el.clientHeight > Number.EPSILON;
