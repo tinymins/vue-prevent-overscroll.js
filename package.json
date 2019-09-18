@@ -1,7 +1,7 @@
 {
   "name": "vue-prevent-overscroll.js",
   "description": "A directive supported plugin for prevent overscroll when scroll on a fixed/absolute DOM in Vue.js components.",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": {
     "name": "Emil Zhai",
     "email": "root@derzh.com"
